@@ -6,13 +6,13 @@ console.log("travelDistance variable's type is " + typeof yearOfBirth); */
 
 const getDomValues = document.getElementById('get_values');
 
+
 getDomValues.addEventListener('click', 
     function() {
         const nameDom = document.getElementById('name');
-        const travelDistanceDom = document.getElementById('travel_distance');
+        const travelDistanceDom = document.getElementById('travel_distance').value;
         const travelDistanceDomN = parseInt(travelDistanceDom);
-        const ageDom = document.getElementById ('age');
-        //alert('I valori inseriti sono: ' + nameDom.value + ' e ' + travelDistanceDomN.value + ' e ' + ageDom.value);
+        const ageDom = document.getElementById ('age').value;
         
         const priceForKm = 0.21;
         console.log('priceForKm is a ' + typeof priceForKm);
@@ -21,15 +21,52 @@ getDomValues.addEventListener('click',
         let ticketPriceN = parseInt(ticketPrice);
         console.log('ticketPriceN is a ' + typeof ticketPriceN);
 
-        alert('Il tuo nome è ' + nameDom.value + ', il costo del biglietto è ' + ticketPriceN.toFixed(2) + '€');
+        
 
-/*
-        if (ageDom == '1') {
-            ticketPrice = ticketPrice / 100 * 80;
+        const nomePasseggeroDom = document.getElementById('nomePasseggero');
+        nomePasseggeroDom.innerHTML = 'Ciao' + nameDom.value;
+
+        const offertaDom = document.getElementById('offerta');
+        offertaDom.innerHTML = 'Offerta Standard';
+
+        const prezzoDom = document.getElementById('prezzo');
+        prezzoDom.innerHTML = ticketPriceN.toFixed(2) + '€';
+
+        let numeroCarrozza = Math.floor(Math.random() * 21) + 1;
+        const carrozzaDom = document.getElementById('carrozza');
+        carrozzaDom.innerHTML = numeroCarrozza;
+
+        let numeroCp = Math.floor(Math.random() * 10000) + 90000;
+        const codiceCpDom = document.getElementById('codiceCp');
+        codiceCpDom.innerHTML = numeroCp;
+
+
+        if (ageDom == '2') {
+            ticketPriceN = ticketPriceN / 100 * 80;
+            offertaDom.innerHTML = 'Sconto 20%';
+            prezzoDom.innerHTML = ticketPriceN.toFixed(2) + '€';
         } else if (ageDom == '3') {
-            ticketPrice = ticketPrice / 100 * 60;
-        }  */
-
-
+            ticketPriceN = ticketPriceN / 100 * 60;
+            offertaDom.innerHTML = 'Sconto 40%';
+            prezzoDom.innerHTML = ticketPriceN.toFixed(2) + '€';
+        }
     }
 );
+
+const cancelDom = document.getElementById('cancel');
+
+
+
+cancelDom.addEventListener('click',
+    function() {
+        const nameDom = document.getElementById('name');
+        const travelDistanceDom = document.getElementById('travel_distance');
+        const ageDom = document.getElementById ('age');
+
+        nameDom.value = '';
+        travelDistanceDom.value = '';
+        ageDom.value = '1';
+    }
+)
+
+

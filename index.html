@@ -8,23 +8,37 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
+        <section>
+            <label for="name">Nome e Cognome</label>
+            <input type="text" id="name" />
 
-        <label for="name">Nome e Cognome</label>
-        <input type="text" id="name" />
+            <label for="travel_distance">Km da percorrere</label>
+            <input type="text" id="travel_distance" />
+            
+            <label for="age">Fascia d'età</label>
+            <select id="age">
+                <option value="1">Maggiorenne</option>
+                <option value="2">Minorenne</option>
+                <option value="3">Over 65</option>
+            </select>
 
-        <label for="travel_distance">Km da percorrere</label>
-        <input type="text" id="travel_distance" />
+            <button id="get_values">
+                Genera
+            </button>
+
+            <button id="cancel">
+                Annulla
+            </button>
+        </section>
+
+        <section>
+            <div id="nomePasseggero"></div>
+            <div id="offerta"></div>
+            <div id="carrozza"></div>
+            <div id="codiceCp"></div>
+            <div id="prezzo"></div>
+        </section>
         
-        <label for="age">Fascia d'età</label>
-        <select id="age">
-            <option value="1">Minorenne</option>
-            <option value="2">Maggiorenne</option>
-            <option value="3">Over 65</option>
-        </select>
-
-        <button id="get_values">
-            Genera
-        </button>
         
         <script type="text/javascript" src="js/main.js"></script>
     </body>
