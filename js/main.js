@@ -13,12 +13,11 @@ getDomValues.addEventListener('click',
 
         const nameDom = document.getElementById('name');
         const travelDistanceDom = document.getElementById('travel_distance').value;
-        const travelDistanceDomN = parseInt(travelDistanceDom);
         const ageDom = document.getElementById ('age').value;
         
         const priceForKm = 0.21;
 
-        let ticketPrice = priceForKm * travelDistanceDomN;
+        let ticketPrice = priceForKm * travelDistanceDom;
 
         const nomePasseggeroDom = document.getElementById('nomePasseggero');
         nomePasseggeroDom.innerHTML = nameDom.value;
