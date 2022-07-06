@@ -38,11 +38,11 @@ getDomValues.addEventListener('click',
         codiceCpDom.innerHTML = numeroCp;
 
 
-        if (ageDom == '2') {
+        if (ageDom == 'underage') {
             ticketPrice = ticketPrice / 100 * 80;
             offertaDom.innerHTML = 'Sconto 20%';
             prezzoDom.innerHTML = ticketPrice.toFixed(2) + '€';
-        } else if (ageDom == '3') {
+        } else if (ageDom == 'senior') {
             ticketPrice = ticketPrice / 100 * 60;
             offertaDom.innerHTML = 'Sconto 40%';
             prezzoDom.innerHTML = ticketPrice.toFixed(2) + '€';

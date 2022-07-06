@@ -19,14 +19,14 @@
                     </div>
                     <div class="col-12 py-3 col-md-4 d-flex flex-column justify-content-center align-items-center">
                         <label class="ms_text_red fw-bold pb-2" for="travel_distance">Km da percorrere</label>
-                        <input class="ms_border_red text-center" type="text" id="travel_distance" placeholder="Inserisci la distanza in km"/>
+                        <input class="ms_border_red text-center" type="number" min="1" step="1" id="travel_distance" placeholder="Inserisci distanza in km"/>
                     </div>
                     <div class="col-12 py-3 col-md-4 d-flex flex-column justify-content-center align-items-center">
                         <label class="ms_text_red fw-bold pb-2" for="age">Fascia d'età</label>
                         <select class="ms_border_red" id="age">
-                        <option value="1">Maggiorenne</option>
-                        <option value="2">Minorenne</option>
-                        <option value="3">Over 65</option>
+                        <option value="normal">Maggiorenne</option>
+                        <option value="underage">Minorenne</option>
+                        <option value="senior">Over 65</option>
                         </select>    
                     </div>
                 </div>
