@@ -63,7 +63,7 @@ cancelDom.addEventListener('click',
 
         nameDom.value = '';
         travelDistanceDom.value = '';
-        ageDom.value = '1';
+        ageDom.value = '';
     }
 )
 
